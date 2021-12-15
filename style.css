@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 854px;
+    background-image: url('https://wallpaper.dog/large/20426971.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-logo {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.page-title {
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+button, .button-jogar {
+    padding: .8rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #A970DD;
+}
+
+h2 {
+    color: white;
+}
+
+#carta-jogador, #carta-maquina {
+    width: 360px;
+    height: 500px;
+    overflow: auto;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+    text-align: left;
+}
+
+#carta-jogador h3 {
+    text-align: center;
+}
+
+.carta-imagem {
+    border: 1px solid black;
+    height: 100px;
+    margin: 10px;
+}
+
+.carta-imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+.carta-status {
+    height: 160px;
+    margin: 2rem;
+    color: white;
+    z-index: 2;
+}
+
+.carta-status input {
+    text-align: left;
+    margin: 10px 10px;
+    margin-top: 15px;
+}
+
+.resultado-final {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #A163D2;
+}
+
+.--spacing {
+    margin-left: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 16px;
+    left: 37px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#cartas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#carta-jogador #opcoes{
+    text-align: left;
+}
+
+#carta-maquina #opcoes{
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+#carta-maquina .carta-status p {
+    margin-bottom: 20px;
+}
+
+.jogadorganhou {
+    transform-origin: center;
+    animation: jogadorganhou 2s;
+    animation-delay: 0.5s;
+}
+
+.jogadorperdeu {
+    transform-origin: center;
+    animation: jogadorperdeu 2s;
+    animation-delay: 0.3s;
+}
+
+.maquinaganhou {
+    transform-origin: center;
+    animation: maquinaganhou 2s;
+    animation-delay: 0.5s;
+}
+
+.maquinaperdeu {
+    transform-origin: center;
+    animation: maquinaperdeu 2s;
+    animation-delay: 0.71s;
+}
+
+@keyframes jogadorganhou {
+    0% {
+        left: 0px;
+        transform: translateX(0px) rotate(0deg);
+    }
+    50% {
+        left: 90vw;
+        transform: translateX(4px) rotate(270deg);
+    }
+    100% {
+        left: 0px;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+@keyframes jogadorperdeu {
+    0%{
+        right: 0px;
+    }
+    50%{
+        right: 90vw;
+    }
+    100%{
+        right: 0px;
+    }
+}
+
+@keyframes maquinaperdeu {
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 90vw;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes maquinaganhou {
+    0% {
+        right: 0px;
+        transform: translateX(0px) rotate(0deg);
+    }
+    50% {
+        right: 90vw;
+        transform: translateX(4px) rotate(270deg);
+    }
+    100% {
+        right: 0px;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
